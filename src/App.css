@@ -6,6 +6,9 @@
 
 .App {
   text-align: center;
+  background-color: #282c34;
+  min-height: 100%;
+  color: white;
 }
 
 .navbar{
@@ -21,12 +24,27 @@
   pointer-events: none;
 }
 
+#notesContainer{
+  box-sizing: border-box;
+  display: flex;
+  margin-top: 5vh;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  /* border: 4px solid yellow; */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .note-container{
   box-sizing: border-box;
   width: 30vw;
-  min-height: 40vh;
+  height: fit-content;
+  margin: 10px;
   padding: 15px 20px;
   color: white;
+  border: 2px solid yellow;
+  border-radius: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -37,14 +55,8 @@
 
 .App-header {
   box-sizing: border-box;
-  background-color: #282c34;
   min-height: 100vh;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -58,4 +70,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#inp{
+  height: 5vh;
+  width: 20vw;
+  color: white;
+  font-size: 2rem;
+  background-color: #282c34;
+  border-top: 0;
+  border-left:  0;
+  border-bottom: 3px solid white;
+  border-right: 0; 
+}
+
+#inp:focus{
+  
+  border: 0;
 }

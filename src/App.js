@@ -8,11 +8,12 @@ function App() {
 
   const greet = () => {
     const heading = document.getElementById("mkheading");
+    const notesContainer = document.getElementById("notesContainer");
     const note = document.createElement("div");
     note.classList.add('note-container'); 
     note.innerText = "Hi! and Namaste! from Mannkumar K. Pandya ";
     note.innerText += inputVariable;
-    heading.append(note);
+    notesContainer.append(note);
   }
   
   const inputUpdate = (e) => {
@@ -44,6 +45,7 @@ function App() {
           {/* <p>{inputVariable}</p> */}
       </div>
         
+      <div id="notesContainer"></div>
       </header>
       
       
