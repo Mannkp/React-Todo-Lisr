@@ -3,14 +3,17 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
+  
+  const [inputVariable, setinputVariable] = useState("");
 
   const greet = () => {
     const heading = document.getElementById("mkheading");
-    const para = document.createElement("p");
-    para.innerText = "Hi! and Namaste! from Mannkumar K. Pandya"
-    heading.append(para);
+    const note = document.createElement("div");
+    note.classList.add('note-container'); 
+    note.innerText = "Hi! and Namaste! from Mannkumar K. Pandya ";
+    note.innerText += inputVariable;
+    heading.append(note);
   }
-  const [inputVariable, setinputVariable] = useState("");
   
   const inputUpdate = (e) => {
     setinputVariable(e.target.value);
@@ -38,7 +41,7 @@ function App() {
           <h1 id='mkheading'>React-Todo-List</h1>
           <input type='text' id='inp' onChange={inputUpdate}></input>
           <button onClick={greet}>Submit</button>
-          <p>{inputVariable}</p>
+          {/* <p>{inputVariable}</p> */}
       </div>
         
       </header>
